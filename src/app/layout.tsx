@@ -16,13 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-      </head>
-
       <body className={inter.className}>
         <div className="w-screen h-screen max-w-[540px] mx-auto">
           <div className="min-h-[93%] bg-orange-500 p-4">{children}</div>

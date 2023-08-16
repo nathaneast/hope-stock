@@ -1,14 +1,19 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    extend: {
+      fontFamily: {
+        // 폰트패밀리
+        roboto: ["var(--roboto)"], // 다음과 같이 배열 안에 string으로 작성합니다.
+        sans: ["var(--sans)"], // 다음과 같이 배열 안에 string으로 작성합니다.
+      },
+    },
+  },
+  variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
-export default config;
