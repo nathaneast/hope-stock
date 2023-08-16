@@ -16,10 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </head>
+
       <body className={inter.className}>
         <div className="w-screen h-screen max-w-[540px] mx-auto">
-          <div className="min-h-[93%] bg-orange-500">{children}</div>
-          <footer className="min-h-[7%]  bg-cyan-600">footer</footer>
+          <div className="min-h-[93%] bg-orange-500 p-4">{children}</div>
+          <footer className="min-h-[7%]  bg-cyan-600">
+            <nav>네브 아이콘 탭</nav>
+          </footer>
         </div>
       </body>
     </html>

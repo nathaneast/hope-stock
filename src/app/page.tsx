@@ -1,5 +1,8 @@
 import { Metadata } from "next";
-import Image from "next/image";
+
+import SearchIcon from "@mui/icons-material/Search";
+import DomainVerificationIcon from "@mui/icons-material/DomainVerification";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 export const metadata: Metadata = {
   title: "hoep-stock",
@@ -8,6 +11,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <header className="flex justify-end">
+        <SearchIcon />
+        <DomainVerificationIcon />
+        <SettingsIcon />
+      </header>
       <div>main</div>
     </main>
   );
