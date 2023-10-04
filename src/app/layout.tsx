@@ -4,6 +4,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import './globals.css';
 
+import { MSWComponent } from '@/mocks/MSWComponent';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,21 +18,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-const foo =    1;
-
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="w-screen h-screen max-w-[540px] mx-auto">
-      {/* 헤더 컴포넌트 분리 고려 */}
-      <header className="flex justify-end">
-        <ListAltIcon />
-        <SettingsIcon />
-      </header>
+          {/* 헤더 컴포넌트 분리 고려 */}
+          <header className="flex justify-end">
+            <ListAltIcon />
+            <SettingsIcon />
+          </header>
 
-
-          <div className="min-h-[93%] bg-orange-500 p-4">{children}</div>
+          <div className="min-h-[93%] bg-orange-500 p-4">
+            <MSWComponent>{children}</MSWComponent>
+          </div>
 
           <footer className="min-h-[7%]  bg-cyan-600">
             <nav>네브 아이콘 탭</nav>

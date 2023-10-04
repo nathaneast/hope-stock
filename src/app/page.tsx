@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      {/* 클라이언트 컴포넌트로 분리 고려 */}
       <section>
         <h2>보유 주식</h2>
         <p>mock원</p>
