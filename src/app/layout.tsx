@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+     <html lang="en">
+      <body className={inter.className} suppressHydrationWarning={true}>
         <div className="w-screen h-screen max-w-[540px] mx-auto">
           {/* 헤더 컴포넌트 분리 고려 */}
           <header className="flex justify-end">

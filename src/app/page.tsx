@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Roboto, Noto_Sans_KR } from 'next/font/google'; // Roboto와 한글 NotoSans를 사용합니다.
 import { Inter } from 'next/font/google';
 
-import StockList from './components/StockList';
+import StockList from '../components/StockList';
 
 export const metadata: Metadata = {
   title: 'hoep-stock',
