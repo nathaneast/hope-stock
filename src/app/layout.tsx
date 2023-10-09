@@ -5,6 +5,7 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import './globals.css';
 
 import { MSWComponent } from '@/mocks/MSWComponent';
+import ReactQueryProvider from '@/context/ReactQueryProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,21 +19,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // TODO: 추후 ui 개발 완료 후 border 제거
   return (
-     <html lang="en">
+    <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
         <div className="w-screen h-screen max-w-[540px] mx-auto">
           {/* 헤더 컴포넌트 분리 고려 */}
-          <header className="flex justify-end">
+          <header className="flex justify-end border border-black-500">
             <ListAltIcon />
             <SettingsIcon />
           </header>
 
-          <div className="min-h-[93%] bg-orange-500 p-4">
-            <MSWComponent>{children}</MSWComponent>
+          <div className="min-h-[93%] p-4 border border-black-500">
+            <MSWComponent>
+              <ReactQueryProvider>{children}</ReactQueryProvider>
+            </MSWComponent>
           </div>
 
-          <footer className="min-h-[7%]  bg-cyan-600">
+          <footer className="min-h-[7%] border border-black-500">
             <nav>네브 아이콘 탭</nav>
           </footer>
         </div>

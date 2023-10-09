@@ -7,7 +7,7 @@ const isMockingMode = process.env.NEXT_PUBLIC_API_MOCKING === 'enabled';
 export const MSWComponent = ({ children }: PropsWithChildren) => {
   const [mswReady, setMSWReady] = useState(!isMockingMode);
 
-  console.log(mswReady, 'mswReady');
+  // console.log(mswReady, 'mswReady');
 
   useEffect(() => {
     const init = async () => {
